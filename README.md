@@ -1,7 +1,7 @@
 # VUE TEMPLATE SYSTEM
 
 ## Interpolations with Mustache Syntax (curly braces)
-- TEXT: The mustache tag will be replaced by the value property on the corresponding data object
+- TEXT: The mustache tag will be replaced by the value property on the corresponding data object.
 ```
 <h2> {{ a }} </h2>
 ```
@@ -19,5 +19,20 @@
 {{ number + 1 }}
 {{ ok ? 'YES' : 'NO' }}
 {{ message.split('').reverse().join('') }}
-<div v-bind:id="'list-' + id"></div>
 ```
+
+## Directives
+Special attributes using the `v-` prefix.
+Reactively applies side effects to the DOM when the value changes
+  - EX: v-if directive removes/inserts the <p> element based on the truthiness of the value "seen".
+  ```
+  <p v-if="seen">Now you see me</p>
+  ```
+- ARGUMENTS: denoted by a colon
+  ```
+  <a v-on:click="doSomething"> ... </a>
+  ```
+- MODIFIERS: denoted by a dote, indicate that a directive should be bound in a special way
+  ```
+  <form v-on:submit.prevent="onSubmit"> ... </form> === event.preventDefault()
+  ```
