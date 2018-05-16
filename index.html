@@ -1,0 +1,17 @@
+<div id="app">
+    <h2> Using Mustaches: {{ rawHtml }} </h2>
+    <h2> Using v-html directive: <span v-html="rawHtml"></span></h2>
+</div>
+
+<script src="https://unpkg.com/vue"></script>
+
+<script>
+
+const vm = new Vue({
+  el: '#app',
+  data: {
+      rawHtml: `<span style="color:red">This Should be red.</span>`
+    },
+  })
+
+</script>
