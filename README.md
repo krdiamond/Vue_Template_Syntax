@@ -1,6 +1,6 @@
 ## VUE TEMPLATE SYSTEM
 
-#Interpolations with Mustache Syntax (curly braces)
+# Interpolations with Mustache Syntax (curly braces)
 - TEXT: The mustache tag will be replaced by the value property on the corresponding data object
 ```
 <h2> {{ a }} </h2>
